@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sokol.yandexmobilization.LangSelectActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_select_langs"
+        android:layout_width="match_parent"
+        android:title="@string/title_lang_select"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_autodetect"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp">
+
+            <TextView
+                android:id="@+id/text_view_autodetect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AutoDetect"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:padding="12dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/card_view_autodetect"
+            android:id="@+id/rv_langs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</LinearLayout>

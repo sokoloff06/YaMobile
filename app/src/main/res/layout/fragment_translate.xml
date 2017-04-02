@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <Button
+            android:id="@+id/button_from_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Source"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/button_reverse_langs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            app:srcCompat="@drawable/ic_compare_arrows_black_24dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/button_to_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Target"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edit_text_translate"
+        android:minLines="4"
+        android:gravity="start"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/pb_translate_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_view_translated"
+        android:gravity="start"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+</LinearLayout>
